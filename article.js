@@ -17,7 +17,6 @@ const articlesModel = require('./models/articles/articlesModel');
 //?
 const { getTranslatedCategory } = require('./functions/getTranslatedCategory');
 
-
 const preAlgeriaArticle = require('./models/preAlgeriaModel');
 const preBahrainArticle = require('./models/preBahrainModel');
 const preCarsArticle = require('./models/preCarsModel');
@@ -101,13 +100,13 @@ mongoose
 		console.log('Database connected');
 	});
 
-const WPAPI = require('wpapi/superagent');
+// const WPAPI = require('wpapi/superagent');
 const categoriesIDs = require('./categoriesIDs');
-var wp = new WPAPI({
-	endpoint: 'http://atlageek.com/?rest_route=/',
-	username: 'brahimakar',
-	password: '110220330',
-});
+// var wp = new WPAPI({
+// 	endpoint: 'http://atlageek.com/?rest_route=/',
+// 	username: 'brahimakar',
+// 	password: '110220330',
+// });
 
 const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 	const allLinks = await premodel.find();
