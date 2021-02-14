@@ -175,6 +175,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										articleDescription: htmlDescription,
 										articleSourceLink: allLinks[i].articleNabdLink,
 										authorName: null,
+										
 										categoryName: categoryTranslated,
 										mediaName: allLinks[i].mediaName,
 										mediaLogo: mediaLogo,
