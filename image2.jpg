@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="ie ie8" dir="rtl" lang="ar"> <![endif]-->
+<!--[if IE 9]> <html class="ie ie9" dir="rtl" lang="ar"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html dir="rtl" lang="ar">
+<!--<![endif]-->
+<head><meta charset="UTF-8" /><meta property="fb:pages" content="273089522819834" /><meta name="google-site-verification" content="xYAGwMUxftDDn8JfvvyXhdK8SfA7tTsCa4MdxhpxnIM" /><title>
+	24 &mdash; الخبر بين لحظة وضحاها
+</title><meta id="MetaResponsive" name="viewport" content="width=device-width, initial-scale=1" /><script src="/cdn-cgi/apps/head/WMd6RHneA_jM6ZcVJQEnf2WJnCw.js"></script><link rel="shortcut icon" href="/imgs/favicon.ico" /><link rel="stylesheet" href="/css/components.min.css?ver=1.0" type="text/css" media="all" /><link rel="stylesheet" href="/css/kdsnews.min.css?ver=3.4" type="text/css" media="all" /><link id="LinkResponsive" rel="stylesheet" href="/css/responsive.min.css?ver=1.1" type="text/css" media="all" /><script type='text/javascript' src='/js/components.min.js?ver=1.0'></script><script type='text/javascript' src='/js/kdsnews.js?ver=1.2'></script>
+<!--[if lt IE 9]>
+<script src="js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<meta id="medatDescription" name="description" content="موقع 24 منبر إعلامي ينطلق من دولة الإمارات العربية المتحدة إلى الدول العربية والعالم تتابعون فيه أخبار السياسة والتكنولوجيا والصحة والفن والرياضة والاقتصاد والثقافة." /><meta id="medatKeywords" name="Keywords" content="أخبار, الإمارات, اتجاهات, نيوميديا, مال وأعمال, ملاعب, لايف ستايل, ثقافة, منوعات, صحة, شباب, تكنولوجيا, الإمارات, أبو ظبي, دبي, الشارقة, العين, أم القيوين, الفجيرة, راس الخيمة" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:site" content="@20fourmedia" /><meta name="twitter:creator" content="@20fourmedia" /><meta name="twitter:domain" content="https://www.24.ae" /><meta id="TwitterUrl" name="twitter:url" content="https://www.24.ae" /><meta id="TwitterTitle" name="twitter:title" content="موقع 24 الإخباري" /><meta id="TwitterDesc" name="twitter:description" content="موقع 24 منبر إعلامي ينطلق من دولة الإمارات العربية المتحدة إلى الدول العربية والعالم تتابعون فيه أخبار السياسة والتكنولوجيا والصحة والفن والرياضة والاقتصاد والثقافة." />
+<link href="https://24.ae/404.aspx" rel="canonical" /></head>
+<body id="PageBody" class="rtl desktop">
+<form method="post" action="./404.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="193A34DB" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABCcgndjNSb0jndjx8ab4hAtNMplUDAVaaKF5nZ6eefiHJ0foioYqP6jaeA0+wkMExNRsK0xeWwogg7YvVex31SOUQZdO1fE6MyUbfhGxRccl9AMYBQoZy+HkAIVeOLdvwF7TFMXVFs0GxWsc3FeMqQA1Sro6M0W/66gqOoNkPAkYQ5iljf1k3GFIDGXeKZAmUOjd+eQxwtK62wk3xiS+X/fdw8/hVGTQGTEFTaLjH3SOHG/aiLrW+R7a6ChB8Y2vPbmtsmNC9IRIlLFkuYYDvwJjEN+B5wSZ6LrLP7ofhdCQuPt1qWUDW/Nq87Nip0964cGkCA5m0ohfOUU+WiJl+cMkgPpDZYOUNJkSL86+b/gaLAvEZg=" />
+<input type="hidden" name="ctl00$HiddenMasterSectionID" id="HiddenMasterSectionID" value="0" />
+<div class="main-wrap">
+<div id="main-head" class="main-head">
+<div class="wrap">
+<header>
+<div class="title-logo">
+<h1>موقع 24 الإخباري</h1>
+<a href="/" title="24">
+<img src="/imgs/logo.png" id="ImgMainLogo" class="logo-image" alt="موقع 24 الإخباري" width="150" height="120" />
+</a>
+</div>
+
+<div id="DivFourBoxes" class="right hidden-mobile">
+<div class="right-wrapper">
+<div class="mflexslider tag-posts-widget">
+<ul class="slides">
+<li>
+<div class="tag-posts-item">
+<a href='/article/607904/أخطاء-مكياج-تجعلك-تبدين-أكبر-سناً' class="image-link">
+<span class="image">
+<img width="184" height="97" src='/images/Articles2/Tab/202012141716252639Q.jpg' alt='أخطاء مكياج تجعلك تبدين أكبر سناً' />
+</span>
+</a>
+<p class="title">
+<a href='/article/607904/أخطاء-مكياج-تجعلك-تبدين-أكبر-سناً' title='أخطاء مكياج تجعلك تبدين أكبر سناً'>
+أخطاء مكياج تجعلك تبدين أكبر سناً</a>
+</p>
+</div>
+</li>
+<li>
+<div class="tag-posts-item">
+<a href='/article/607698/العمل-من-المنزل-يضر-بالصحة-العقلية-والجسدية' class="image-link">
+<span class="image">
+<img width="184" height="97" src='/images/Articles2/Tab/20201213154426680IK.jpg' alt='العمل من المنزل يضر بالصحة العقلية والجسدية' />
+</span>
+</a>
+<p class="title">
+<a href='/article/607698/العمل-من-المنزل-يضر-بالصحة-العقلية-والجسدية' title='العمل من المنزل يضر بالصحة العقلية والجسدية'>
+العمل من المنزل يضر بالصحة العقلية والجسدية</a>
+</p>
+</div>
+</li>
+<li>
+<div class="tag-posts-item">
+<a href='/article/607972/خماسي-هجومي-ناري-في-تشكيل-فرانس-فوتبول-التاريخي' class="image-link">
+<span class="image">
+<img width="184" height="97" src='/images/Articles2/Tab/2020121524126957D3.jpg' alt='خماسي هجومي ناري في تشكيل فرانس فوتبول التاريخي' />
+</span>
+</a>
+<p class="title">
+<a href='/article/607972/خماسي-هجومي-ناري-في-تشكيل-فرانس-فوتبول-التاريخي' title='خماسي هجومي ناري في تشكيل فرانس فوتبول التاريخي'>
+خماسي هجومي ناري في تشكيل فرانس فوتبول التاريخي</a>
+</p>
+</div>
+</li>
+<li>
+<div class="tag-posts-item">
+<a href='/article/607170/كيف-تحرقين-10-آلاف-سعرة-حرارية-بأعمال-المنزل' class="image-link">
+<span class="image">
+<img width="184" height="97" src='/images/Articles2/Tab/20201210161435417M3.jpg' alt='كيف تحرقين 10 آلاف سعرة حرارية بأعمال المنزل' />
+</span>
+</a>
+<p class="title">
+<a href='/article/607170/كيف-تحرقين-10-آلاف-سعرة-حرارية-بأعمال-المنزل' title='كيف تحرقين 10 آلاف سعرة حرارية بأعمال المنزل'>
+كيف تحرقين 10 آلاف سعرة حرارية بأعمال المنزل</a>
+</p>
+</div>
+</li>
+<li>
+<div class="tag-posts-item">
+<a href='/article/607729/عوامل-ترفع-مخاطر-الإصابة-بقصور-القلب' class="image-link">
+<span class="image">
+<img width="184" height="97" src='/images/Articles2/Tab/20201213193511235T9.jpg' alt='عوامل ترفع مخاطر الإصابة بقصور القلب' />
+</span>
+</a>
+<p class="title">
+<a href='/article/607729/عوامل-ترفع-مخاطر-الإصابة-بقصور-القلب' title='عوامل ترفع مخاطر الإصابة بقصور القلب'>
+عوامل ترفع مخاطر الإصابة بقصور القلب</a>
+</p>
+</div>
+</li>
+ <li>
+<div class="tag-posts-item">
+<a href='/article/607188/3-مجموعات-من-الأشخاص-لن-يحصلوا-على-لقاح-كورونا' class="image-link">
+<span class="image">
+<img width="184" height="97" src='/images/Articles2/Tab/20201210164215526LZ.jpg' alt='3 مجموعات من الأشخاص لن يحصلوا على لقاح كورونا' />
+</span>
+</a>
+<p class="title">
+<a href='/article/607188/3-مجموعات-من-الأشخاص-لن-يحصلوا-على-لقاح-كورونا' title='3 مجموعات من الأشخاص لن يحصلوا على لقاح كورونا'>
+3 مجموعات من الأشخاص لن يحصلوا على لقاح كورونا</a>
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</header>
+<div class="navigation-wrap cf">
+<nav class="navigation cf nav-dark has-search">
+<div>
+<div class="mobile" data-type="" data-search="1">
+<div class="selected">
+<a href="#"><i class="hamburger fa fa-bars"></i></a>
+</div>
+</div>
+<div class="menu-main-container">
+<ul id="menu-main" class="menu">
+<li class="color-blue-navy"><a href="/section/1/أخبار">
+أخبار</a><input type="hidden" name="ctl00$RepMenu$ctl00$HiddenSecID" id="RepMenu_HiddenSecID_0" value="1" />
+<ul class="sub-menu">
+<li class='blue-navy'><a target='_self' href='/section/31/عربي'>
+عربي</a>
+</li>
+<li class='blue-navy'><a target='_self' href='/section/32/دولي'>
+دولي</a>
+</li>
+<li class='blue-navy'><a target='_self' href='/section/52/حول-العالم'>
+حول العالم</a>
+</li>
+</ul>
+</li>
+<li class="color-MetallicGold"><a href="/section/30/الإمارات">
+الإمارات</a><input type="hidden" name="ctl00$RepMenu$ctl01$HiddenSecID" id="RepMenu_HiddenSecID_1" value="30" />
+<ul class="sub-menu">
+<li class='MetallicGold'><a target='_self' href='/section/88/أخبار'>
+أخبار</a>
+</li>
+<li class='MetallicGold'><a target='_self' href='/section/140/اقتصاد'>
+اقتصاد</a>
+</li>
+<li class='MetallicGold'><a target='_self' href='/section/89/تحقيقات'>
+تحقيقات</a>
+</li>
+<li class='MetallicGold'><a target='_self' href='/section/90/مقابلات'>
+مقابلات</a>
+</li>
+<li class='MetallicGold'><a target='_self' href='/section/227/محاكم'>
+محاكم</a>
+</li>
+<li class='MetallicGold'><a target='_self' href='/section/92/صحافة'>
+صحافة</a>
+</li>
+<li class='MetallicGold'><a target='_self' href='/section/139/رياضة'>
+رياضة</a>
+</li>
+<li class='MetallicGold'><a target='_blank' href='/UAE-Mother/Default.aspx'>
+أم الإمارات</a>
+</li>
+<li class='MetallicGold'><a target='_blank' href='/UAEMARTYRS/Default.aspx'>
+شـهـداء الإمارات</a>
+</li>
+</ul>
+</li>
+<li class="color-greenl"><a href="/section/2/اتجاهات">
+اتجاهات</a><input type="hidden" name="ctl00$RepMenu$ctl02$HiddenSecID" id="RepMenu_HiddenSecID_2" value="2" />
+ <ul class="sub-menu">
+<li class='greenl'><a target='_self' href='/section/33/مقالات'>
+مقالات</a>
+</li>
+<li class='greenl'><a target='_self' href='/section/36/تقارير'>
+تقارير</a>
+</li>
+<li class='greenl'><a target='_self' href='/section/38/صحافة-عربية'>
+صحافة عربية</a>
+</li>
+<li class='greenl'><a target='_self' href='/section/39/صحافة-العالم'>
+صحافة العالم</a>
+</li>
+<li class='greenl'><a target='_self' href='/section/41/كاريكاتور'>
+كاريكاتور</a>
+</li>
+<li class='greenl'><a target='_self' href='/section/135/صناع-الحدث'>
+صناع الحدث</a>
+</li>
+<li class='greenl'><a target='_self' href='/section/237/انفوغراف'>
+انفوغراف</a>
+</li>
+<li class='greenl'><a target='_self' href='/section/126/كتابنا'>
+كتابنا</a>
+</li>
+</ul>
+</li>
+<li class="color-orange"><a href="/section/3/نيوميديا">
+نيوميديا</a><input type="hidden" name="ctl00$RepMenu$ctl03$HiddenSecID" id="RepMenu_HiddenSecID_3" value="3" />
+<ul class="sub-menu">
+<li class='orange'><a target='_self' href='/section/163/أخبار'>
+أخبار</a>
+</li>
+<li class='orange'><a target='_self' href='/section/193/صور'>
+ صور</a>
+</li>
+</ul>
+</li>
+<li class="color-moutarde"><a href="/section/4/مال-وأعمال">
+مال وأعمال</a><input type="hidden" name="ctl00$RepMenu$ctl04$HiddenSecID" id="RepMenu_HiddenSecID_4" value="4" />
+<ul class="sub-menu">
+<li class='moutarde'><a target='_self' href='/section/127/أخبار'>
+أخبار</a>
+</li>
+<li class='moutarde'><a target='_self' href='/section/42/أسواق-وبورصات'>
+أسواق وبورصات</a>
+</li>
+<li class='moutarde'><a target='_self' href='/section/44/تقارير-وتحليلات'>
+تقارير وتحليلات</a>
+</li>
+</ul>
+</li>
+<li class="color-green2"><a href="/section/5/ملاعب">
+ملاعب</a><input type="hidden" name="ctl00$RepMenu$ctl05$HiddenSecID" id="RepMenu_HiddenSecID_5" value="5" />
+<ul class="sub-menu">
+<li class='green2'><a target='_self' href='/section/47/أخبار'>
+أخبار</a>
+</li>
+<li class='green2'><a target='_self' href='/section/48/بطولات'>
+بطولات</a>
+</li>
+<li class='green2'><a target='_self' href='/section/46/مقابلات'>
+مقابلات</a>
+</li>
+<li class='green2'><a target='_self' href='/section/51/مقالات'>
+مقالات </a>
+</li>
+<li class='green2'><a target='_self' href='/section/49/تحقيقات'>
+تحقيقات</a>
+ </li>
+<li class='green2'><a target='_self' href='/section/50/صحافة-رياضية'>
+صحافة رياضية</a>
+</li>
+<li class='green2'><a target='_self' href='/section/241/أمم-أفريقيا'>
+أمم أفريقيا</a>
+</li>
+<li class='green2'><a target='_self' href='/section/215/كوبا-أمريكا'>
+كوبا أمريكا</a>
+</li>
+</ul>
+</li>
+<li class="color-pink"><a href="/section/6/لايف-ستايل">
+لايف ستايل</a><input type="hidden" name="ctl00$RepMenu$ctl06$HiddenSecID" id="RepMenu_HiddenSecID_6" value="6" />
+<ul class="sub-menu">
+<li class='pink'><a target='_self' href='/section/204/أخبار'>
+أخبار</a>
+</li>
+<li class='pink'><a target='_self' href='/section/53/أزياء-وموضة'>
+أزياء وموضة</a>
+</li>
+<li class='pink'><a target='_self' href='/section/54/ديكور'>
+ديكور</a>
+</li>
+<li class='pink'><a target='_self' href='/section/55/تجميل-وعناية'>
+تجميل وعناية</a>
+</li>
+<li class='pink'><a target='_self' href='/section/56/مطبخ'>
+مطبخ</a>
+</li>
+<li class='pink'><a target='_self' href='/section/57/سيارات'>
+سيارات</a>
+</li>
+<li class='pink'><a target='_self' href='/section/58/سفر'>
+ سفر</a>
+</li>
+<li class='pink'><a target='_self' href='/section/160/غرائب'>
+غرائب</a>
+</li>
+<li class='pink'><a target='_self' href='/section/207/هو-وهي'>
+هو وهي</a>
+</li>
+</ul>
+</li>
+<li class="color-brown0"><a href="/section/7/ثقافة">
+ثقافة</a><input type="hidden" name="ctl00$RepMenu$ctl07$HiddenSecID" id="RepMenu_HiddenSecID_7" value="7" />
+<ul class="sub-menu">
+<li class='brown0'><a target='_self' href='/section/73/أخبار'>
+أخبار </a>
+</li>
+<li class='brown0'><a target='_self' href='/section/76/ترجمات'>
+ترجمات</a>
+</li>
+<li class='brown0'><a target='_self' href='/section/75/مقابلات'>
+مقابلات</a>
+</li>
+<li class='brown0'><a target='_self' href='/section/68/تشكيل'>
+تشكيل</a>
+</li>
+<li class='brown0'><a target='_self' href='/section/77/نصوص'>
+نصوص</a>
+</li>
+<li class='brown0'><a target='_self' href='/section/189/فوتوغرافيا'>
+فوتوغرافيا</a>
+</li>
+<li class='brown0'><a target='_self' href='/section/74/إصدارات'>
+إصدارات </a>
+</li>
+</ul>
+</li>
+
+<li class="color-violet"><a href="/section/8/منوعات">
+منوعات</a><input type="hidden" name="ctl00$RepMenu$ctl08$HiddenSecID" id="RepMenu_HiddenSecID_8" value="8" />
+<ul class="sub-menu">
+<li class='violet'><a target='_self' href='/section/71/أخبار'>
+أخبار</a>
+</li>
+<li class='violet'><a target='_self' href='/section/72/نجوم'>
+نجوم</a>
+</li>
+<li class='violet'><a target='_self' href='/section/70/موسيقى'>
+موسيقى</a>
+</li>
+<li class='violet'><a target='_self' href='/section/94/سينما'>
+سينما</a>
+</li>
+</ul>
+</li>
+<li class="color-bleulight"><a href="/section/9/صحة">
+صحة</a><input type="hidden" name="ctl00$RepMenu$ctl09$HiddenSecID" id="RepMenu_HiddenSecID_9" value="9" />
+<ul class="sub-menu">
+<li class='bleulight'><a target='_self' href='/section/166/أخبار'>
+أخبار </a>
+</li>
+<li class='bleulight'><a target='_self' href='/section/65/تغذية'>
+تغذية</a>
+</li>
+<li class='bleulight'><a target='_self' href='/section/64/جديد-الطب'>
+جديد الطب</a>
+</li>
+<li class='bleulight'><a target='_self' href='/section/63/دراسات'>
+دراسات</a>
+</li>
+<li class='bleulight'><a target='_self' href='/section/61/الأم-والطفل'>
+الأم والطفل</a>
+ </li>
+<li class='bleulight'><a target='_self' href='/section/62/نصائح'>
+نصائح</a>
+</li>
+</ul>
+</li>
+<li class="color-red"><a href="/section/10/شباب">
+شباب</a><input type="hidden" name="ctl00$RepMenu$ctl10$HiddenSecID" id="RepMenu_HiddenSecID_10" value="10" />
+<ul class="sub-menu">
+<li class='red'><a target='_self' href='/section/205/أخبار'>
+أخبار</a>
+</li>
+<li class='red'><a target='_self' href='/section/93/تحقيقات'>
+تحقيقات</a>
+</li>
+<li class='red'><a target='_self' href='/section/82/بروفايل'>
+بروفايل</a>
+</li>
+<li class='red'><a target='_self' href='/section/84/مقالات'>
+مقالات</a>
+</li>
+<li class='red'><a target='_self' href='/section/85/إبداعات'>
+إبداعات</a>
+</li>
+<li class='red'><a target='_self' href='/section/86/مدارس-وجامعات'>
+مدارس وجامعات</a>
+</li>
+<li class='red'><a target='_self' href='/section/165/تنمية-ذاتية'>
+تنمية ذاتية </a>
+</li>
+</ul>
+</li>
+<li class="color-greenlight"><a href="/section/203/تكنولوجيا">
+تكنولوجيا</a><input type="hidden" name="ctl00$RepMenu$ctl11$HiddenSecID" id="RepMenu_HiddenSecID_11" value="203" />
+<ul class="sub-menu">
+
+<li class='greenlight'><a target='_self' href='/section/59/أخبار'>
+أخبار</a>
+</li>
+<li class='greenlight'><a target='_self' href='/section/208/هواتف-وأجهزة'>
+هواتف وأجهزة</a>
+</li>
+<li class='greenlight'><a target='_self' href='/section/209/تطبيقات'>
+تطبيقات</a>
+</li>
+<li class='greenlight'><a target='_self' href='/section/210/ألعاب'>
+ألعاب</a>
+</li>
+<li class='greenlight'><a target='_self' href='/section/211/نصائح'>
+نصائح</a>
+</li>
+<li class='greenlight'><a target='_self' href='/section/212/جديد-التقنية'>
+جديد التقنية</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+</nav>
+
+<div class="nav-search">
+<div class="search-overlay">
+<a href="#" title="Search" class="search-icon"><i class="fa fa-search"></i></a>
+<div class="search">
+<div id="PnlSearch">
+<input name="ctl00$txtSearch" type="text" id="txtSearch" class="query" placeholder="بحث..." />
+<a onclick="return check_Search();" id="BtnSearch" class="search-button" href="javascript:__doPostBack(&#39;ctl00$BtnSearch&#39;,&#39;&#39;)"><i class="fa fa-search"></i></a>
+<script type="text/javascript" defer>
+                                            function check_Search() {
+                                                if (document.getElementById("txtSearch").value.length == 0) {
+                                                    alert("من فضلك أدخل كلمات البحث"); return false;
+                                                } else { return true;}
+                                            }
+                                        </script>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div class="top-bar">
+<section class="top-bar-content cf">
+<div class="row">
+<div class="col-t2 col-xs-40">
+<div class="top-date">
+الأربعاء 16 ديسمبر 2020
+</div>
+</div>
+<div class="col-t7 hidden-mobile" id="news-ticker">
+<div class="news-ticker">
+<ul class="news-ticker-list">
+<li><a href="/article/608199/الجزائر-اعتقال-4-متشددين-واستسلام-خامس" title="الجزائر: اعتقال 4 متشددين واستسلام خامس">
+الجزائر: اعتقال 4 متشددين واستسلام خامس</a></li>
+<li><a href="/article/608198/ولي-العهد-السعودي-يتوقع-ارتفاع-النمو-الاقتصادي" title="ولي العهد السعودي يتوقع ارتفاع النمو الاقتصادي ">
+ولي العهد السعودي يتوقع ارتفاع النمو الاقتصادي </a></li>
+<li><a href="/article/608186/لبنان-1264-إصابة-جديدة-بكورونا" title="لبنان: 1264 إصابة جديدة بكورونا">
+لبنان: 1264 إصابة جديدة بكورونا</a></li>
+<li><a href="/article/608185/اغتيال-ناشط-في-الحراك-الاحتجاجي-في-بغداد" title="اغتيال ناشط في الحراك الاحتجاجي في بغداد">
+اغتيال ناشط في الحراك الاحتجاجي في بغداد</a></li>
+<li><a href="/article/608184/كندا-إصابات-كورونا-تقترب-من-473-ألفاً" title="كندا: إصابات كورونا تقترب من 473 ألفاً">
+كندا: إصابات كورونا تقترب من 473 ألفاً</a></li>
+<li><a href="/article/608182/فرنسا-تسجل-790-وفاة-جديدة-بكورونا" title="فرنسا تسجل 790 وفاة جديدة بكورونا">
+فرنسا تسجل 790 وفاة جديدة بكورونا</a></li>
+<li><a href="/article/608173/كوشنر-يقود-وفداً-أمريكياً-إلى-إسرائيل-والمغرب" title="كوشنر يقود وفداً أمريكياً إلى إسرائيل والمغرب">
+كوشنر يقود وفداً أمريكياً إلى إسرائيل والمغرب</a></li>
+<li><a href="/article/608167/الرئيس-الجزائري-يهنئ-بايدن" title="الرئيس الجزائري يهنئ بايدن  ">
+الرئيس الجزائري يهنئ بايدن </a></li>
+
+<li><a href="/article/608160/مصر-تدين-الخطط-الإسرائيلية-لبناء-وحدات-استيطانية-بالقدس" title="مصر تدين الخطط الإسرائيلية لبناء وحدات استيطانية بالقدس">
+مصر تدين الخطط الإسرائيلية لبناء وحدات استيطانية بالقدس</a></li>
+<li><a href="/article/608153/زعيم-الجمهوريين-يعترف-بفوز-بايدن" title="زعيم الجمهوريين يعترف بفوز بايدن">
+زعيم الجمهوريين يعترف بفوز بايدن</a></li>
+<li><a href="/article/608146/اليونان-تضاعف-الإنفاق-العسكري-5-أمثال" title="اليونان تضاعف الإنفاق العسكري 5 أمثال">
+اليونان تضاعف الإنفاق العسكري 5 أمثال</a></li>
+<li><a href="/article/608142/تونس-التطبيع-مع-إسرائيل-ليس-مطروحاً-" title="تونس: التطبيع مع إسرائيل &quot;ليس مطروحاً&quot;">
+تونس: التطبيع مع إسرائيل "ليس مطروحاً"</a></li>
+<li><a href="/article/608141/اليونان-تحاكم-جواسيس-أردوغان" title="اليونان تحاكم جواسيس أردوغان ">
+اليونان تحاكم جواسيس أردوغان </a></li>
+<li><a href="/article/608140/ميركل-تحذر-من-قسوة-الموجة-الثانية-لكورونا" title="ميركل تحذر من قسوة الموجة الثانية لكورونا">
+ميركل تحذر من قسوة الموجة الثانية لكورونا</a></li>
+<li><a href="/article/608136/بومبيو-روسيا-تهدد-استقرار-المتوسط" title="بومبيو: روسيا تهدد استقرار المتوسط ">
+بومبيو: روسيا تهدد استقرار المتوسط </a></li>
+<li><a href="/article/608133/الجزائر-القوات-البحرية-تتسلم-كاسحة-ألغام-جديدة" title="الجزائر: القوات البحرية تتسلم كاسحة ألغام جديدة">
+الجزائر: القوات البحرية تتسلم كاسحة ألغام جديدة</a></li>
+<li><a href="/article/608130/روسيا-ترجح-مواصلة-إدارة-بايدن-سياسة-أمريكا-المعروفة-" title="روسيا ترجح مواصلة إدارة بايدن سياسة أمريكا &quot;المعروفة&quot; ">
+روسيا ترجح مواصلة إدارة بايدن سياسة أمريكا "المعروفة" </a></li>
+<li><a href="/article/608114/استبدال-اللحوم-الحمراء-بالأسماك-يحمي-من-أمراض-القلب" title="استبدال اللحوم الحمراء بالأسماك يحمي من أمراض القلب">
+استبدال اللحوم الحمراء بالأسماك يحمي من أمراض القلب</a></li>
+<li><a href="/article/608113/-مبادلة-تعتزم-الاستثمار-في-مجال-التدفئة-المستدامة-في-هولندا" title="&quot;مبادلة&quot; تعتزم الاستثمار في مجال التدفئة المستدامة في هولندا">
+"مبادلة" تعتزم الاستثمار في مجال التدفئة المستدامة في هولندا</a></li>
+<li><a href="/article/608108/223-وفاة-و7704-إصابات-جديدة-بكورونا-في-إيران" title="223 وفاة و7704 إصابات جديدة بكورونا في إيران">
+223 وفاة و7704 إصابات جديدة بكورونا في إيران</a></li>
+<li><a href="/article/608107/الشرطة-الإيطالية-تقضي-على-عصابة-مافيا-في-صقلية" title="الشرطة الإيطالية تقضي على عصابة مافيا في صقلية ">
+الشرطة الإيطالية تقضي على عصابة مافيا في صقلية </a></li>
+<li><a href="/article/608103/قتل-تسعة-وخزّن-أشلاءهم-محكمة-يابانية-تقضي-بإعدام-سفاح-تويتر-" title="قتل تسعة وخزّن أشلاءهم.. محكمة يابانية تقضي بإعدام &quot;سفاح تويتر&quot;">
+قتل تسعة وخزّن أشلاءهم.. محكمة يابانية تقضي بإعدام "سفاح تويتر"</a></li>
+<li><a href="/article/608101/سقوط-قذيفة-إسرائيلية-بالخطأ-على-منزل-في-غزة" title="سقوط قذيفة إسرائيلية بالخطأ على منزل في غزة ">
+سقوط قذيفة إسرائيلية بالخطأ على منزل في غزة </a></li>
+<li><a href="/article/608095/ميركل-نظريات-المؤامرة-هجوم-على-مجتمعنا" title="ميركل: نظريات المؤامرة هجوم على مجتمعنا">
+ميركل: نظريات المؤامرة هجوم على مجتمعنا</a></li>
+<li><a href="/article/608096/مقتل-طيار-سريلانكي-بعد-تحطم-طائرته-العسكرية" title="مقتل طيار سريلانكي بعد تحطم طائرته العسكرية ">
+مقتل طيار سريلانكي بعد تحطم طائرته العسكرية </a></li>
+<li><a href="/article/608090/غموض-بريكست-يلقي-بظلاله-على-مفاوضات-حصص-الصيد" title="غموض بريكست يلقي بظلاله على مفاوضات حصص الصيد ">
+غموض بريكست يلقي بظلاله على مفاوضات حصص الصيد </a></li>
+<li><a href="/article/608089/الإصابات-بكورونا-في-إسرائيل-تتجاوز-ألفين-لأول-مرة-منذ-شهرين" title="الإصابات بكورونا في إسرائيل تتجاوز ألفين لأول مرة منذ شهرين">
+الإصابات بكورونا في إسرائيل تتجاوز ألفين لأول مرة منذ شهرين</a></li>
+<li><a href="/article/608088/مسؤول-إسرائيلي-يؤكد-التفاوض-مع-حماس-على-تبادل-الأسرى" title="مسؤول إسرائيلي يؤكد التفاوض مع حماس على تبادل الأسرى ">
+مسؤول إسرائيلي يؤكد التفاوض مع حماس على تبادل الأسرى </a></li>
+<li><a href="/article/608085/ما-أهمية-تطبيقات-التنظيف-لأجهزة-أندرويد-" title="ما أهمية تطبيقات التنظيف لأجهزة أندرويد؟">
+ما أهمية تطبيقات التنظيف لأجهزة أندرويد؟</a></li>
+<li><a href="/article/608087/مقتل-ثاني-مسؤول-أفغاني-اليوم-بتفجير-سيارة-مفخخة" title="مقتل ثاني مسؤول أفغاني اليوم بتفجير سيارة مفخخة">
+مقتل ثاني مسؤول أفغاني اليوم بتفجير سيارة مفخخة</a></li>
+</ul>
+</div>
+</div>
+
+<div class="col-t3 col-xs-60">
+<ul class="social_icons">
+<li><a href="https://www.youtube.com/20fourMedia" id="a_YouTube" target="_blank" class="social_youtube" title="Youtube"><i class="fa fa-youtube-play"></i></a></li>
+<li><a href="https://telegram.me/twentyfour_ae" target="_blank" class="social_telegram" title="Telegram"><i class="fa fa-paper-plane"></i></a></li>
+<li><a href="https://www.facebook.com/pages/24Media/273089522819834" id="a_Facebook" target="_blank" class="social_facebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+<li><a href="https://twitter.com/20fourMedia" id="a_Twitter" target="_blank" class="social_twitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+<li><a href="https://instagram.com/20fourmedia" id="a_Instagram" target="_blank" class="social_instagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+<li><a href="javascript:alert('للإشتراك بالخدمة يرجى إرسال 24 إلي الرقم التالي 00971501110381');" id="a_whatsap" class="social_whatsapp" title="Whatsapp"><i class="fa fa-whatsapp"></i></a></li>
+</ul>
+
+</div>
+</div>
+
+</section>
+
+</div>
+
+</div>
+
+</div>
+<div class="main wrap cf">
+<div class="row">
+<header class="post-heading">
+<h1 class="main-heading">صفحة غير موجودة</h1>
+</header>
+<div class="post-content error-page row">
+<div class="col-3 text-404">404</div>
+<div class="col-9 text-nfound">
+<h1>صفحة غير موجودة</h1>
+<p>عذراً.. الصفحة غير موجودة. برجاء التأكد من كتابة الرابط بشكل صحيح.. يمكنك التنقل باستخدام القائمة الرئيسية لتصفح أقسام الموقع أو استخدام البحث</p>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="main-footer">
+<div class="wrap">
+<ul class="widgets row cf">
+<li class="widget column col-4 khellan-about">
+<div class="about-widget">
+<img src="/imgs/footerlogo.png" alt="موقع 24" width="94px" height="65px" />
+<div class="footer-social">
+<a href="/rss-list.aspx" rel="publisher" class="feeds-lnk_rss hidden-mobile">
+<i class="fa fa-rss"></i>
+</a>
+<h3 class="social_title hidden-desktop">تواصلوا معنا على</h3>
+<ul class="social_icons hidden-desktop">
+<li><a href="https://www.youtube.com/20fourMedia" id="a_YouTube_footer" target="_blank" class="social_youtube" title="Youtube"><i class="fa fa-youtube-play"></i></a></li>
+<li><a href="https://telegram.me/twentyfour_ae" target="_blank" class="social_telegram" title="Telegram"><i class="fa fa-paper-plane"></i></a></li>
+<li><a href="https://www.facebook.com/pages/24Media/273089522819834" id="a_Facebook_footer" target="_blank" class="social_facebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+<li><a href="https://twitter.com/20fourMedia" id="a_Twitter_footer" target="_blank" class="social_twitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+<li><a href="https://instagram.com/20fourmedia" id="a_Instagram_footer" target="_blank" class="social_instagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+<li><a href="javascript:alert('للإشتراك بالخدمة يرجى إرسال 24 إلي الرقم التالي 00971501110381');" id="a_whats_footer" class="social_whatsapp" title="Whatsapp"><i class="fa fa-whatsapp"></i></a></li>
+<li><a href="/rss-list.aspx" class="social_rss" title="RSS"><i class="fa fa-rss"></i></a></li>
+</ul>
+</div>
+<p class="hidden-mobile">
+جميع الحقوق محفوظة© 24 للدراسات الإعلامية <br />
+الخبر بين لحظة وضحاها
+</p>
+</div>
+</li>
+<li class="widget column col-4 widget_nav_menu">
+<div class="menu-footer-pages-container">
+<ul id="menu-footer-pages" class="menu">
+<li><a href="/">الرئيسية</a></li>
+<li><a href="/privacy-policy.aspx">سياسة الخصوصية</a></li>
+<li><a href="/about-us.aspx">من نحن</a></li>
+<li><a href="/terms-and-conditions.aspx">الشروط والأحكام</a></li>
+ <li><a href="/contact-us.aspx">إتصل بنا</a></li>
+<li><a href="/our-team.aspx">فريق العمل</a></li>
+</ul>
+</div>
+</li>
+<li class="widget column col-4 widget_nav_menu">
+<div class="menu-footer-depts-container">
+<ul id="menu-footer-depts" class="menu">
+<li class="color-blue-navy"><a href="/section/1/أخبار">أخبار</a></li>
+<li class="color-orange"><a href="/section/3/نيوميديا">نيوميديا</a></li>
+<li class="color-pink"><a href="/section/6/لايف-ستايل">لايف ستايل</a></li>
+<li class="color-bleulight"><a href="/section/9/صحة">صحة</a></li>
+<li class="color-greenl"><a href="/section/2/اتجاهات">اتجاهات</a></li>
+<li class="color-moutarde"><a href="/section/4/مال-وأعمال">مال وأعمال</a></li>
+<li class="color-brown0"><a href="/section/7/ثقافة">ثقافة</a></li>
+<li class="color-red"><a href="/section/10/شباب">شباب</a></li>
+<li class="color-MetallicGold"><a href="/section/30/الإمارات">الإمارات</a></li>
+<li class="color-green2"><a href="/section/5/ملاعب">ملاعب</a></li>
+<li class="color-violet"><a href="/section/8/منوعات">منوعات</a></li>
+<li class="color-greenlight"><a href="/section/203/تكنولوجيا">تكنولوجيا</a></li>
+</ul>
+</div>
+<div class="hidden-desktop" style="clear: both;">
+<br>جميع الحقوق محفوظة© 24 للدراسات الإعلامية
+</div>
+</li>
+</ul>
+</div>
+</footer>
+</div>
+
+</form>
+</body>
+</html>

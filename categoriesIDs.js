@@ -1,0 +1,32 @@
+module.exports = {
+	Urgent: '6',
+	Morocco: '7',
+	World: '8',
+	Sport: '9',
+	Economy: '10',
+	Health: '11',
+	Technology: '12',
+	Cars: '13',
+	Women: '14',
+	Knowledge: '15',
+	Cooking: '16',
+	Tourist: '17',
+	Kuwait: '18',
+	SaudiArabia: '19',
+	Egypt: '20',
+	Emirates: '21',
+	Lebanon: '22',
+	Bahrain: '23',
+	Jordan: '24',
+	Palestine: '25',
+	Yemen: '26',
+	Libya: '27',
+	Tunisia: '28',
+	Oman: '29',
+	Iraq: '30',
+	Algeria: '31',
+};
+
+const getCategoryId = (country) => {
+    
+};
