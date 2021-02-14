@@ -487,28 +487,7 @@ const j = schedule.scheduleJob('*/10 * * * * *', async function () {
 					break;
 				case 'Urgent':
 					await scrapArticle(preUrgentArticle, Urgent, 'Urgent', firstQueuedTask[0]._id);
-					break;
-				default:
-					null;
 			}
 		}
 	}
 });
-
-// //* Cron job every 10 minutes
-// const checkStuckJobs = schedule.scheduleJob('*/5 * * * * *', async function () {
-// 	try {
-// 	} catch (error) {
-// 		console.log('error');
-// 	}
-// });
-
-const getLink = async (link) => {
-	let res;
-	try {
-		const response = await axios.get(link);
-		console.log(response);
-	} catch (error) {
-		console.error(error);
-	}
-};
