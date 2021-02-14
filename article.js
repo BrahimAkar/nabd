@@ -161,6 +161,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 							if (already2.length > 0) {
 								console.log('Already published');
 							} else if (already2.length === 0) {
+								const categoryTranslated = getTranslatedCategory(modelName);
 								const htmlDescription = `<figure class="wp-block-video aligncenter"><video controls src="${videoLink}"></video></figure>`;
 								await articlesModel
 									.create({
@@ -174,7 +175,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										articleDescription: htmlDescription,
 										articleSourceLink: allLinks[i].articleNabdLink,
 										authorName: null,
-										categoryName: getTranslatedCategory(modelName),
+										categoryName: categoryTranslated,
 										mediaName: allLinks[i].mediaName,
 										mediaLogo: mediaLogo,
 									})
@@ -223,6 +224,8 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 							if (already2.length > 0) {
 								console.log('Already published');
 							} else if (already2.length === 0) {
+								const categoryTranslated = getTranslatedCategory(modelName);
+
 								const htmlDescription = `<iframe width="560" height="315" src="${youtubeVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 								await articlesModel
 									.create({
@@ -235,7 +238,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										articleImageURL: allLinks[i].articleImageURL,
 										articleDescription: htmlDescription,
 										articleSourceLink: allLinks[i].articleNabdLink,
-										categoryName: getTranslatedCategory(modelName),
+										categoryName: categoryTranslated,
 										authorName: null,
 										mediaName: allLinks[i].mediaName,
 										mediaLogo: mediaLogo,
@@ -301,6 +304,8 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 						if (already.length > 0) {
 							console.log('Already published');
 						} else if (already.length === 0) {
+							const categoryTranslated = getTranslatedCategory(modelName);
+
 							await articlesModel
 								.create({
 									originalArticleID: allLinks[i].originalArticleID,
@@ -312,7 +317,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 									articleImageURL: allLinks[i].articleImageURL,
 									articleDescription: description,
 									articleSourceLink: allLinks[i].articleNabdLink,
-									categoryName: getTranslatedCategory(modelName),
+									categoryName: categoryTranslated,
 									authorName: null,
 									mediaName: allLinks[i].mediaName,
 									mediaLogo: mediaLogo,
