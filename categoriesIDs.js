@@ -26,7 +26,3 @@ module.exports = {
 	Iraq: '30',
 	Algeria: '31',
 };
-
-const getCategoryId = (country) => {
-    
-};

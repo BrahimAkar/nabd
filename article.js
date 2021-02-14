@@ -15,6 +15,7 @@ var schedule = require('node-schedule');
 //? Article model
 const articlesModel = require('./models/articles/articlesModel');
 //?
+const { getTranslatedCategory } = require('./functions/getTranslatedCategory');
 
 const preAlgeriaArticle = require('./models/preAlgeriaModel');
 const preBahrainArticle = require('./models/preBahrainModel');
@@ -173,7 +174,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										articleDescription: htmlDescription,
 										articleSourceLink: allLinks[i].articleNabdLink,
 										authorName: null,
-										categoryName: modelName,
+										categoryName: getTranslatedCategory(modelName),
 										mediaName: allLinks[i].mediaName,
 										mediaLogo: mediaLogo,
 									})
@@ -234,7 +235,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										articleImageURL: allLinks[i].articleImageURL,
 										articleDescription: htmlDescription,
 										articleSourceLink: allLinks[i].articleNabdLink,
-										categoryName: modelName,
+										categoryName: getTranslatedCategory(modelName),
 										authorName: null,
 										mediaName: allLinks[i].mediaName,
 										mediaLogo: mediaLogo,
@@ -311,7 +312,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 									articleImageURL: allLinks[i].articleImageURL,
 									articleDescription: description,
 									articleSourceLink: allLinks[i].articleNabdLink,
-									categoryName: modelName,
+									categoryName: getTranslatedCategory(modelName),
 									authorName: null,
 									mediaName: allLinks[i].mediaName,
 									mediaLogo: mediaLogo,
