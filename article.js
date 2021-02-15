@@ -166,7 +166,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 								await articlesModel
 									.create({
 										originalArticleID: allLinks[i].originalArticleID,
-										articleCreatedDate: allLinks[i].articleCreatedDate,
+										articleCreatedDate: new Date(),
 										articleType: 'InternVideo',
 										videoLink: videoLink,
 										articleLanguage: 'ar',
@@ -175,7 +175,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										articleDescription: htmlDescription,
 										articleSourceLink: allLinks[i].articleNabdLink,
 										authorName: null,
-										
+
 										categoryName: categoryTranslated,
 										mediaName: allLinks[i].mediaName,
 										mediaLogo: mediaLogo,
@@ -231,7 +231,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 								await articlesModel
 									.create({
 										originalArticleID: allLinks[i].originalArticleID,
-										articleCreatedDate: allLinks[i].articleCreatedDate,
+										articleCreatedDate: new Date(),
 										articleType: 'YoutubeVideo',
 										videoLink: youtubeVideo,
 										articleLanguage: 'ar',
@@ -310,7 +310,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 							await articlesModel
 								.create({
 									originalArticleID: allLinks[i].originalArticleID,
-									articleCreatedDate: allLinks[i].articleCreatedDate,
+									articleCreatedDate: new Date(),
 									articleType: 'Article',
 									videoLink: null,
 									articleLanguage: 'ar',

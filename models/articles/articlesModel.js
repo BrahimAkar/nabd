@@ -14,7 +14,7 @@ const articlesSchema = new mongoose.Schema(
 		},
 		articleCreatedDate: {
 			type: Date,
-			default: new Date(),
+			required: [true, 'Article created date is required!'],
 		},
 		articleTitle: {
 			type: String,
