@@ -77,6 +77,7 @@ const {
 } = categories;
 
 const allCategories = require('./categoriesIDs');
+const { sendToSourcesAPI } = require('./functions/sendToSourcesAPI');
 
 var puppeteerAutoscrollDown = require('puppeteer-autoscroll-down');
 const AdblockerPlugin = require('puppeteer-extra-plugin-adblocker');
@@ -118,9 +119,11 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 	console.log('Number of links', allLinks.length);
 
 	puppeteer
-		.launch({ headless: true, args: ['--single-process', '--no-zygote', '--no-sandbox'] })
+		.launch({ headless: false, args: ['--single-process', '--no-zygote', '--no-sandbox'] })
 		.then(async (browser) => {
 			const page = await browser.newPage();
+			const categoryTranslated = getTranslatedCategory(modelName);
+
 			await page.bringToFront();
 			await page.setViewport({ width: 1366, height: 768 });
 			await page.setDefaultTimeout(120000);
@@ -131,14 +134,15 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 					await page.goto(allLinks[i].articleNabdLink);
 					await page.waitForTimeout(5000);
 					const typeOfArticle = await checkTypeOfArticle(page);
-
+					const data = await page.evaluate(() => document.querySelector('*').outerHTML);
+					const dom = new JSDOM(data);
+					const mediaLogo = dom.window.document.querySelector('[alt=source-logo]').src;
+					await sendToSourcesAPI(categoryTranslated, mediaLogo, allLinks[i].mediaName);
+					//! to send
 					if (typeOfArticle === 'video') {
 						// do somthing
-
 						let videoType = await checkVideoType(page);
-						const data = await page.evaluate(() => document.querySelector('*').outerHTML);
-						const dom = new JSDOM(data);
-						const mediaLogo = dom.window.document.querySelector('[alt=source-logo]').src;
+
 						if (videoType === 'intern') {
 							let videoLink = dom.window.document.querySelector('.play').getAttribute('href');
 							await premodel.findByIdAndDelete({ _id: allLinks[i]._id });
@@ -150,7 +154,6 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 							if (already2.length > 0) {
 								console.log('Already published');
 							} else if (already2.length === 0) {
-								const categoryTranslated = getTranslatedCategory(modelName);
 								const htmlDescription = `<figure class="wp-block-video aligncenter"><video controls src="${videoLink}"></video></figure>`;
 								await articlesModel
 									.create({
@@ -186,8 +189,6 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 							if (already2.length > 0) {
 								console.log('Already published');
 							} else if (already2.length === 0) {
-								const categoryTranslated = getTranslatedCategory(modelName);
-
 								const htmlDescription = `<iframe width="560" height="315" src="${youtubeVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 								await articlesModel
 									.create({
@@ -209,9 +210,6 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 							}
 						}
 					} else if (typeOfArticle === 'normal') {
-						const data = await page.evaluate(() => document.querySelector('*').outerHTML);
-						const dom = new JSDOM(data);
-						const mediaLogo = dom.window.document.querySelector('[alt=source-logo]').src;
 						let preDescription = dom.window.document.querySelector('.nb-article-content');
 						let description = '';
 						if (preDescription !== null) {
@@ -236,8 +234,6 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 						if (already.length > 0) {
 							console.log('Already published');
 						} else if (already.length === 0) {
-							const categoryTranslated = getTranslatedCategory(modelName);
-
 							await articlesModel
 								.create({
 									originalArticleID: allLinks[i].originalArticleID,
