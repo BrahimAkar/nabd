@@ -138,21 +138,10 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 						let videoType = await checkVideoType(page);
 						const data = await page.evaluate(() => document.querySelector('*').outerHTML);
 						const dom = new JSDOM(data);
-						const mediaLogo = dom.window.document
-							.querySelector('#nb-pub-details > a > img')
-							.getAttribute('src');
-						let videoLink;
+						const mediaLogo = dom.window.document.querySelector('[alt=source-logo]').src;
 						if (videoType === 'intern') {
 							let videoLink = dom.window.document.querySelector('.play').getAttribute('href');
 							await premodel.findByIdAndDelete({ _id: allLinks[i]._id });
-							//! Wordpress Uncomment
-							// try {
-							// 	const response = await fetch(encodeURI(allLinks[i].articleImageURL));
-							// 	const buffer = await response.buffer();
-							// 	Fs.writeFileSync('./image.jpg', buffer);
-							// } catch (error) {
-							// 	console.log('Cant save image');
-							// }
 
 							const already2 = await articlesModel.find({
 								originalArticleID: allLinks[i].originalArticleID,
@@ -180,25 +169,6 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										mediaName: allLinks[i].mediaName,
 										mediaLogo: mediaLogo,
 									})
-									.then(async (res) => {
-										//! WORDPRESS UNCOMMENT
-										// let imageID;
-										// const mediaCreated = await wp.media().file('./image.jpg').create({
-										// 	title: allLinks[i].articleTitle,
-										// 	alt_text: allLinks[i].articleTitle,
-										// 	caption: allLinks[i].articleTitle,
-										// 	description: allLinks[i].articleTitle,
-										// });
-										// imageID = mediaCreated.id;
-										// const postCreated = await wp.posts().create({
-										// 	title: allLinks[i].articleTitle,
-										// 	content: htmlDescription,
-										// 	status: 'publish',
-										// 	media: imageID,
-										// 	featured_media: imageID,
-										// 	categories: [categoriesIDs[modelName]],
-										// });
-									})
 									.catch((err) => console.log(err));
 							}
 						} else if (videoType === 'youtube') {
@@ -208,15 +178,6 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 								'https://www.youtube.com/embed/' +
 								fullYoutubeVideo.split('/embed/')[1].split('?autoplay=')[0];
 							await premodel.findByIdAndDelete({ _id: allLinks[i]._id });
-
-							//! Wordpress Uncomment
-							// try {
-							// 	const response = await fetch(encodeURI(allLinks[i].articleImageURL));
-							// 	const buffer = await response.buffer();
-							// 	Fs.writeFileSync('./image.jpg', buffer);
-							// } catch (error) {
-							// 	console.log('Cant save image');
-							// }
 
 							const already2 = await articlesModel.find({
 								originalArticleID: allLinks[i].originalArticleID,
@@ -244,34 +205,13 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										mediaName: allLinks[i].mediaName,
 										mediaLogo: mediaLogo,
 									})
-									.then(async (res) => {
-										//! Wordpress Uncomment
-										// let imageID;
-										// const mediaCreated = await wp.media().file('./image.jpg').create({
-										// 	title: allLinks[i].articleTitle,
-										// 	alt_text: allLinks[i].articleTitle,
-										// 	caption: allLinks[i].articleTitle,
-										// 	description: allLinks[i].articleTitle,
-										// });
-										// imageID = mediaCreated.id;
-										// const postCreated = await wp.posts().create({
-										// 	title: allLinks[i].articleTitle,
-										// 	content: htmlDescription,
-										// 	status: 'publish',
-										// 	media: imageID,
-										// 	featured_media: imageID,
-										// 	categories: [categoriesIDs[modelName]],
-										// });
-									})
 									.catch((err) => console.log(err));
 							}
 						}
 					} else if (typeOfArticle === 'normal') {
 						const data = await page.evaluate(() => document.querySelector('*').outerHTML);
 						const dom = new JSDOM(data);
-						const mediaLogo = dom.window.document
-							.querySelector('#nb-pub-details > a > img')
-							.getAttribute('src');
+						const mediaLogo = dom.window.document.querySelector('[alt=source-logo]').src;
 						let preDescription = dom.window.document.querySelector('.nb-article-content');
 						let description = '';
 						if (preDescription !== null) {
@@ -290,15 +230,6 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 						} else {
 							preSourceLink = '';
 						}
-
-						//! WORDPRESS Uncomment
-						// try {
-						// 	const response = await fetch(encodeURI(allLinks[i].articleImageURL));
-						// 	const buffer = await response.buffer();
-						// 	Fs.writeFileSync('./image.jpg', buffer);
-						// } catch (error) {
-						// 	console.log('Cant save image');
-						// }
 
 						const already = await articlesModel.find({ originalArticleID: allLinks[i].originalArticleID });
 
@@ -322,25 +253,6 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 									authorName: null,
 									mediaName: allLinks[i].mediaName,
 									mediaLogo: mediaLogo,
-								})
-								.then(async (res) => {
-									//! Wordpress Uncomment
-									// let imageID;
-									// const mediaCreated = await wp.media().file('./image.jpg').create({
-									// 	title: allLinks[i].articleTitle,
-									// 	alt_text: allLinks[i].articleTitle,
-									// 	caption: allLinks[i].articleTitle,
-									// 	description: allLinks[i].articleTitle,
-									// });
-									// imageID = mediaCreated.id;
-									// const postCreated = await wp.posts().create({
-									// 	title: allLinks[i].articleTitle,
-									// 	content: description,
-									// 	status: 'publish',
-									// 	media: imageID,
-									// 	featured_media: imageID,
-									// 	categories: [categoriesIDs[modelName]],
-									// });
 								})
 								.catch((err) => console.log(err));
 						}
