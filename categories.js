@@ -3,7 +3,7 @@ module.exports = {
 	Morocco: '13-a4c684',
 	World: '1-1388b4',
 	Sport: '18-a2e886',
-	Economy: '1-1388b4',
+	Economy: '27-d6633d',
 	Health: '19-49bd80',
 	Technology: '17-dc0746',
 	Cars: '23-3c25a5',
