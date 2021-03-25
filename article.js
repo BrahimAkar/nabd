@@ -119,7 +119,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 	console.log('Number of links', allLinks.length);
 
 	puppeteer
-		.launch({ headless: false, args: ['--single-process', '--no-zygote', '--no-sandbox'] })
+		.launch({ headless: true, args: ['--single-process', '--no-zygote', '--no-sandbox'] })
 		.then(async (browser) => {
 			const page = await browser.newPage();
 			const categoryTranslated = getTranslatedCategory(modelName);
