@@ -119,7 +119,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 	console.log('Number of links', allLinks.length);
 
 	puppeteer
-		.launch({ headless: true, args: ['--single-process', '--no-zygote', '--no-sandbox'] })
+		.launch({ headless: false, args: ['--single-process', '--no-zygote', '--no-sandbox'] })
 		.then(async (browser) => {
 			const page = await browser.newPage();
 			const categoryTranslated = getTranslatedCategory(modelName);
@@ -216,9 +216,11 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 						if (preDescription !== null) {
 							description = dom.window.document.querySelector('.nb-article-content').innerHTML;
 							articleCleanDescription = dom.window.document.querySelector('.nb-article-content')
-								.innerText;
+								.textContent;
+							console.log(articleCleanDescription);
 						} else {
 							description = '';
+							articleCleanDescription = '';
 						}
 
 						// description = description + '';
@@ -237,6 +239,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 						if (already.length > 0) {
 							console.log('Already published');
 						} else if (already.length === 0) {
+							console.log(articleCleanDescription);
 							await articlesModel
 								.create({
 									originalArticleID: allLinks[i].originalArticleID,
