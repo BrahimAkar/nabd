@@ -212,8 +212,11 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 					} else if (typeOfArticle === 'normal') {
 						let preDescription = dom.window.document.querySelector('.nb-article-content');
 						let description = '';
+						let articleCleanDescription = '';
 						if (preDescription !== null) {
 							description = dom.window.document.querySelector('.nb-article-content').innerHTML;
+							articleCleanDescription = dom.window.document.querySelector('.nb-article-content')
+								.innerText;
 						} else {
 							description = '';
 						}
@@ -244,6 +247,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 									articleTitle: allLinks[i].articleTitle,
 									articleImageURL: allLinks[i].articleImageURL,
 									articleDescription: description,
+									articleCleanDescription: articleCleanDescription,
 									articleSourceLink: allLinks[i].articleNabdLink,
 									categoryName: categoryTranslated,
 									authorName: null,

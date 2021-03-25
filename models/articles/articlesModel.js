@@ -52,6 +52,10 @@ const articlesSchema = new mongoose.Schema(
 		articleDescription: {
 			type: String,
 		},
+		articleCleanDescription: {
+			type: String,
+			default:null
+		},
 	},
 
 	{
