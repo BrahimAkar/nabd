@@ -3,7 +3,7 @@ const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 var schedule = require('node-schedule');
 const { createTask } = require('./functions/createTask');
-// const articles = require('./models/articles');
+
 const preAlgeriaArticle = require('./models/preAlgeriaModel');
 const preBahrainArticle = require('./models/preBahrainModel');
 const preCarsArticle = require('./models/preCarsModel');

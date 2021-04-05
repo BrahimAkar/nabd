@@ -13,7 +13,7 @@ const { createTask } = require('./functions/createTask');
 
 var schedule = require('node-schedule');
 //? Article model
-const article = require('./models/articles/article');
+const article = require('./models/articles/articlesModel');
 //?
 const { getTranslatedCategory } = require('./functions/getTranslatedCategory');
 
