@@ -13,7 +13,7 @@ const { createTask } = require('./functions/createTask');
 
 var schedule = require('node-schedule');
 //? Article model
-const articlesModel = require('./models/articles/articlesModel');
+const article = require('./models/articles/article');
 //?
 const { getTranslatedCategory } = require('./functions/getTranslatedCategory');
 
@@ -146,7 +146,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 							let videoLink = dom.window.document.querySelector('.play').getAttribute('href');
 							await premodel.findByIdAndDelete({ _id: allLinks[i]._id });
 
-							const already2 = await articlesModel.find({
+							const already2 = await article.find({
 								originalArticleID: allLinks[i].originalArticleID,
 							});
 
@@ -154,7 +154,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 								console.log('Already published');
 							} else if (already2.length === 0) {
 								const htmlDescription = `<figure class="wp-block-video aligncenter"><video controls src="${videoLink}"></video></figure>`;
-								await articlesModel
+								await article
 									.create({
 										originalArticleID: allLinks[i].originalArticleID,
 										articleCreatedDate: new Date(),
@@ -181,7 +181,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 								fullYoutubeVideo.split('/embed/')[1].split('?autoplay=')[0];
 							await premodel.findByIdAndDelete({ _id: allLinks[i]._id });
 
-							const already2 = await articlesModel.find({
+							const already2 = await article.find({
 								originalArticleID: allLinks[i].originalArticleID,
 							});
 
@@ -189,7 +189,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 								console.log('Already published');
 							} else if (already2.length === 0) {
 								const htmlDescription = `<iframe width="560" height="315" src="${youtubeVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-								await articlesModel
+								await article
 									.create({
 										originalArticleID: allLinks[i].originalArticleID,
 										articleCreatedDate: new Date(),
@@ -233,13 +233,13 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 							preSourceLink = '';
 						}
 
-						const already = await articlesModel.find({ originalArticleID: allLinks[i].originalArticleID });
+						const already = await article.find({ originalArticleID: allLinks[i].originalArticleID });
 
 						if (already.length > 0) {
 							console.log('Already published');
 						} else if (already.length === 0) {
 							console.log(articleCleanDescription);
-							await articlesModel
+							await article
 								.create({
 									originalArticleID: allLinks[i].originalArticleID,
 									articleCreatedDate: new Date(),

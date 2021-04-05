@@ -64,6 +64,6 @@ const articlesSchema = new mongoose.Schema(
 	}
 );
 
-const articlesModel = mongoose.model('articlesModel', articlesSchema);
+const article = mongoose.model('article', articlesSchema);
 
-module.exports = articlesModel;
+module.exports = article;
