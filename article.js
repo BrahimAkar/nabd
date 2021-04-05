@@ -88,8 +88,7 @@ const task = require('./models/task');
 dotenv.config({ path: './config.env' });
 
 // Connecting MongoDB
-const DB =
-	'mongodb://brahim:brahim@cluster0-shard-00-00.0pvrw.mongodb.net:27017,cluster0-shard-00-01.0pvrw.mongodb.net:27017,cluster0-shard-00-02.0pvrw.mongodb.net:27017/preArticles?ssl=true&replicaSet=atlas-aft047-shard-0&authSource=admin&retryWrites=true&w=majority';
+const DB = 'mongodb://youpel:199747@164.90.141.28:27017/postgoo';
 mongoose
 	.connect(DB, {
 		useNewUrlParser: true,
