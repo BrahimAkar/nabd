@@ -216,7 +216,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 							description = dom.window.document.querySelector('.nb-article-content').innerHTML;
 							articleCleanDescription = dom.window.document.querySelector('.nb-article-content')
 								.textContent;
-							console.log(articleCleanDescription);
+					//		console.log(articleCleanDescription);
 						} else {
 							description = '';
 							articleCleanDescription = '';
