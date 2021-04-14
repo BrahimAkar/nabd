@@ -216,7 +216,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 							description = dom.window.document.querySelector('.nb-article-content').innerHTML;
 							articleCleanDescription = dom.window.document.querySelector('.nb-article-content')
 								.textContent;
-					//		console.log(articleCleanDescription);
+							//		console.log(articleCleanDescription);
 						} else {
 							description = '';
 							articleCleanDescription = '';
@@ -238,7 +238,6 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 						if (already.length > 0) {
 							console.log('Already published');
 						} else if (already.length === 0) {
-							console.log(articleCleanDescription);
 							await article
 								.create({
 									originalArticleID: allLinks[i].originalArticleID,
