@@ -21,12 +21,12 @@ mongoose
 		useFindAndModify: false,
 	})
 	.then(() => {
-		console.log('Database connected');
+		//****** */	console.log('Database connected');
 	});
 
 const run = async () => {
 	const latest = await preEconomyArticle.find().limit(1).sort({ $natural: -1 });
-	console.log(latest);
+	//****** */	console.log(latest);
 	const latestID = latest[0].originalNabdArticleID.split('-')[0];
 
 	form.append('last_article_id', latestID);
@@ -52,14 +52,14 @@ const run = async () => {
 						let category = full[i].children[0].children[1].children[0].textContent;
 						all.push({ title, image, link, category, originalNabdArticleID });
 					} catch (error) {
-						console.log(error.message);
+						//****** */			console.log(error.message);
 					}
 				}
 
 				try {
 					await preEconomyArticle.insertMany(all, { ordered: false });
 				} catch (error) {
-					console.log(error.message);
+					//****** */			console.log(error.message);
 				}
 			} catch (error) {
 				console.error(error);
@@ -86,7 +86,7 @@ const test2 = async () => {
 	console.log(latestID);
 };
 
-const getTheLatest = async () => {};
+const getTheLatest = async () => { };
 
 run();
 

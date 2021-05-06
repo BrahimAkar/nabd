@@ -4,7 +4,7 @@ let queue = kue.createQueue();
 // event handler. called when job is saved to the redis
 
 queue.on('job enqueue', function () {
-	console.log('Job submitted in the Queue');
+	//****** */ console.log('Job submitted in the Queue');
 	process.exit(0);
 });
 

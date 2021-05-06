@@ -128,7 +128,7 @@ hitApiQueue.process(async (job) => {
 		await page.screenshot({ path: 'example.png' });
 		await page.waitForTimeout(15000);
 		await browser.close();
-		console.log(model);
+		//****** */	console.log(model);
 		return Promise.resolve({ message: 'OK' });
 	} catch (error) {
 		Promise.reject(error);
@@ -140,12 +140,12 @@ const hitApi = (preModel, model, CategoryID, modelName) => {
 };
 
 const algeriaJob = schedule.scheduleJob('*/5 * * * * *', async function () {
-	console.log('Executing');
+	//****** */	console.log('Executing');
 	hitApi(preAlgeriaArticle, AlgeriaArticle, Algeria, 'Algeria');
 });
 
 hitApiQueue.on('completed', (job, result) => {
-	console.log(`Job completed with result ${result}`);
+	//****** */	console.log(`Job completed with result ${result}`);
 });
 
 // const moroccoJob = schedule.scheduleJob('52 * * * *', async function () {

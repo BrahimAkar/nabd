@@ -82,7 +82,7 @@ mongoose
 		useUnifiedTopology: true,
 	})
 	.then(() => {
-		console.log('Database connected');
+	//****** */	console.log('Database connected');
 	});
 
 // ! 27-d6633d
@@ -118,16 +118,19 @@ const homePageScraper = async (model, categoryID, taskName) => {
 					all.push({ articleTitle, articleImageURL, articleNabdLink, mediaName, originalArticleID });
 				} catch (error) {
 					await browser.close();
-					console.log(error.message);
+				//****** */	console.log(error.message);
 				}
 			}
 			try {
 				await createTask(taskName);
 				await model.insertMany(all, { ordered: false });
-			} catch (error) {}
+			} catch (error) { }
 			await browser.close();
 		})
-		.catch((err) => console.log(err.message));
+		.catch((err) => {
+
+			//****** */	console.log(err.message)
+		});
 	all = [];
 };
 
@@ -144,128 +147,128 @@ const checkTypeOfArticle = async (page) => {
 };
 
 const moroccoJob = schedule.scheduleJob('48 * * * *', async function () {
-	console.log('Morocco preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+	//****** */	console.log('Morocco preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preMoroccoArticle, Morocco, 'Morocco');
 });
 
 const algeriaJob = schedule.scheduleJob('50 * * * *', async function () {
-	console.log('Algeria preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+	//****** */	console.log('Algeria preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preAlgeriaArticle, Algeria, 'Algeria');
 });
 
 const kuwaitJob = schedule.scheduleJob('52 * * * *', async function () {
-	console.log('Kuwait preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+	//****** */	console.log('Kuwait preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preKuwaitArticle, Kuwait, 'Kuwait');
 });
 const palestineJob = schedule.scheduleJob('54 * * * *', async function () {
-	console.log('Palestine preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+	//****** */	console.log('Palestine preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(prePalestineArticle, Palestine, 'Palestine');
 });
 
 const worldJob = schedule.scheduleJob('56 * * * *', async function () {
-	console.log('World preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+	//****** */	console.log('World preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preWorldArticle, World, 'World');
 });
 
 const tunisiaJob = schedule.scheduleJob('58 * * * *', async function () {
-	console.log('Tunisia preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+	//****** */	console.log('Tunisia preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preTunisiaArticle, Tunisia, 'Tunisia');
 });
 
 const saudiarabiaJob = schedule.scheduleJob('00 * * * *', async function () {
-	console.log('Saudi Arabia preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+	//****** */	console.log('Saudi Arabia preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preSaudiArabiaArticle, SaudiArabia, 'SaudiArabia');
 });
 
 const yemenJob = schedule.scheduleJob('02 * * * *', async function () {
-	console.log('Yemen preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+	//****** */	console.log('Yemen preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preYemenArticle, Yemen, 'Yemen');
 });
 
 const womenJob = schedule.scheduleJob('04 * * * *', async function () {
-	console.log('Women preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+	//****** */	console.log('Women preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preWomenArticle, Women, 'Women');
 });
 
 const touristJob = schedule.scheduleJob('06 * * * *', async function () {
-	console.log('Tourist preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+	//****** */	console.log('Tourist preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preTouristArticle, Tourist, 'Tourist');
 });
 
 const technologyJob = schedule.scheduleJob('08 * * * *', async function () {
-	console.log('Technology preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+	//****** */	console.log('Technology preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preTechnologyArticle, Technology, 'Technology');
 });
 
 const sportJob = schedule.scheduleJob('10 * * * *', async function () {
-	console.log('Sport preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+	//****** */	console.log('Sport preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preSportArticle, Sport, 'Sport');
 });
 
 const omanJob = schedule.scheduleJob('12 * * * *', async function () {
-	console.log('Oman preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+//****** */	console.log('Oman preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preOmanArticle, Oman, 'Oman');
 });
 const libyaJob = schedule.scheduleJob('14 * * * *', async function () {
-	console.log('Libya preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+//****** */	console.log('Libya preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preLibyaArticle, Libya, 'Libya');
 });
 const lebanonJob = schedule.scheduleJob('16 * * * *', async function () {
-	console.log('Lebanon preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+//****** */	console.log('Lebanon preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preLebanonArticle, Lebanon, 'Lebanon');
 });
 
 const knowledgeJob = schedule.scheduleJob('18 * * * *', async function () {
-	console.log('Knowledge preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+//****** */	console.log('Knowledge preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preKnowledgeArticle, Knowledge, 'Knowledge');
 });
 
 const jordanJob = schedule.scheduleJob('20 * * * *', async function () {
-	console.log('Jordan preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+//****** */	console.log('Jordan preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preJordanArticle, Jordan, 'Jordan');
 });
 
 const iraqJob = schedule.scheduleJob('22 * * * *', async function () {
-	console.log('Iraq preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+//****** */	console.log('Iraq preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preIraqArticle, Iraq, 'Iraq');
 });
 
 const healthJob = schedule.scheduleJob('24 * * * *', async function () {
-	console.log('Health preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+//****** */	console.log('Health preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preHealthArticle, Health, 'Health');
 });
 
 const emiratesJob = schedule.scheduleJob('26 * * * *', async function () {
-	console.log('Emirates preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+//****** */	console.log('Emirates preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preEmiratesArticle, Emirates, 'Emirates');
 });
 
 const egyptJob = schedule.scheduleJob('28 * * * *', async function () {
-	console.log('Egypt preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+//****** */	console.log('Egypt preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preEgyptArticle, Egypt, 'Egypt');
 });
 
 const economyJob = schedule.scheduleJob('30 * * * *', async function () {
-	console.log('Economy preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+//****** */	console.log('Economy preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preEconomyArticle, Economy, 'Economy');
 });
 
 const cookingJob = schedule.scheduleJob('32 * * * *', async function () {
-	console.log('Cooking preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+//****** */	console.log('Cooking preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preCookingArticle, Cooking, 'Cooking');
 });
 
 const carsJob = schedule.scheduleJob('34 * * * *', async function () {
-	console.log('Cars preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+//****** */	console.log('Cars preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preCarsArticle, Cars, 'Cars');
 });
 
 const bahrainJob = schedule.scheduleJob('36 * * * *', async function () {
-	console.log('Bahrain preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+//****** */	console.log('Bahrain preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preBahrainArticle, Bahrain, 'Bahrain');
 });
 
 const urgentJob = schedule.scheduleJob('38 * * * *', async function () {
-	console.log('Urgent preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
+//****** */	console.log('Urgent preJOB is executing', new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 	homePageScraper(preUrgentArticle, Urgent, 'Urgent');
 });

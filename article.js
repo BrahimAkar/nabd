@@ -119,7 +119,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 		status: 'running',
 		dateLaunched: Date.now(),
 	});
-	console.log('Number of links', allLinks.length);
+	//****** */	console.log('Number of links', allLinks.length);
 
 	puppeteer
 		.launch({ headless: true, args: ['--single-process', '--no-zygote', '--no-sandbox'] })
@@ -132,7 +132,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 			await page.setDefaultTimeout(120000);
 			for (i = 0; i < allLinks.length; i++) {
 				currentStep++;
-				console.log(`Article N: ${i + 1}/${allLinks.length} of ${modelName}`);
+				//****** */	console.log(`Article N: ${i + 1}/${allLinks.length} of ${modelName}`);
 				try {
 					await page.goto(allLinks[i].articleNabdLink);
 					await page.waitForTimeout(5000);
@@ -152,7 +152,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 							});
 
 							if (already2.length > 0) {
-								console.log('Already published');
+								//****** */			console.log('Already published');
 							} else if (already2.length === 0) {
 								const htmlDescription = `<figure class="wp-block-video aligncenter"><video controls src="${videoLink}"></video></figure>`;
 								await article
@@ -171,10 +171,12 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										mediaName: allLinks[i].mediaName,
 										mediaLogo: mediaLogo,
 									})
-									.catch((err) => console.log(err));
+									.catch((err) => {
+										//****** */	console.log(err)
+									});
 							}
 						} else if (videoType === 'youtube') {
-							console.log('Video Youtube');
+							//****** */			console.log('Video Youtube');
 							let fullYoutubeVideo = dom.window.document.querySelector('iframe').getAttribute('src');
 							let youtubeVideo =
 								'https://www.youtube.com/embed/' +
@@ -186,7 +188,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 							});
 
 							if (already2.length > 0) {
-								console.log('Already published');
+								//****** */				console.log('Already published');
 							} else if (already2.length === 0) {
 								const htmlDescription = `<iframe width="560" height="315" src="${youtubeVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 								await article
@@ -205,7 +207,10 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										mediaName: allLinks[i].mediaName,
 										mediaLogo: mediaLogo,
 									})
-									.catch((err) => console.log(err));
+									.catch((err) => {
+
+										//****** */ console.log(err)
+									});
 							}
 						}
 					} else if (typeOfArticle === 'normal') {
@@ -249,7 +254,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 						const already = await article.find({ originalArticleID: allLinks[i].originalArticleID });
 
 						if (already.length > 0) {
-							console.log('Already published');
+							//****** */		console.log('Already published');
 						} else if (already.length === 0) {
 
 							await article
@@ -269,13 +274,15 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 									mediaName: allLinks[i].mediaName,
 									mediaLogo: mediaLogo,
 								})
-								.catch((err) => console.log(err));
+								.catch((err) => {
+									//****** */	console.log(err)
+								});
 						}
 
 						await premodel.findByIdAndDelete({ _id: allLinks[i]._id });
 					}
 				} catch (error) {
-					console.log(error.message);
+					//****** */	console.log(error.message);
 				}
 			}
 			await browser.close();
@@ -334,10 +341,7 @@ const j = schedule.scheduleJob('*/10 * * * * *', async function () {
 			console.warn('the stucked process was killed with success!');
 		}
 	} else if (runningTasks.length === 0) {
-		console.log(
-			'No task is running right now, the Queued ones will be executed if are they available!',
-			new Date().toISOString()
-		);
+		//****** */ console.log('No task is running right now, the Queued ones will be executed if are they available!',			new Date().toISOString());
 		const firstQueuedTask = await task.find({
 			status: 'queued',
 		});
