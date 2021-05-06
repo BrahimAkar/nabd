@@ -327,18 +327,16 @@ const j = schedule.scheduleJob('*/10 * * * * *', async function () {
 		let diff = (dateNow - dbDate) / 1000;
 		diff /= 60;
 		const minutesSpended = Math.abs(Math.round(diff));
-		console.warn(`${runningTasks[0].taskName} task is running for about ${minutesSpended} minutes`);
+		//****** */		console.warn(`${runningTasks[0].taskName} task is running for about ${minutesSpended} minutes`);
 		if (minutesSpended > 10) {
-			console.error(
-				`Oh no, you should kill the ${runningTasks[0].taskName} task!!, it takes more than ${minutesSpended} minutes to finish`
-			);
+			//****** */			console.error(	`Oh no, you should kill the ${runningTasks[0].taskName} task!!, it takes more than ${minutesSpended} minutes to finish`			);
 			// Set his status to failed
 			await task.findByIdAndUpdate(runningTasks[0]._id, {
 				status: 'failed',
 			});
 			// Restart the process ( to close the currently running browser instance)
 			shell.exec('pm2 restart article');
-			console.warn('the stucked process was killed with success!');
+			//****** */			console.warn('the stucked process was killed with success!');
 		}
 	} else if (runningTasks.length === 0) {
 		//****** */ console.log('No task is running right now, the Queued ones will be executed if are they available!',			new Date().toISOString());
