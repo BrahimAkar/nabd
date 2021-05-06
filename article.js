@@ -10,6 +10,7 @@ const { JSDOM } = jsdom;
 const fetch = require('node-fetch');
 const Fs = require('fs');
 const { createTask } = require('./functions/createTask');
+const { parse } = require('node-html-parser');
 
 var schedule = require('node-schedule');
 //? Article model
@@ -43,6 +44,9 @@ const preUrgentArticle = require('./models/preUrgentModel');
 const preWomenArticle = require('./models/preWomenModel');
 const preWorldArticle = require('./models/preWorldModel');
 const preYemenArticle = require('./models/preYemenModel');
+
+const { getSourcesLink } = require('./functions/getSourcesLink');
+
 
 //! MODELS
 const categories = require('./categories');
@@ -137,11 +141,8 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 					const dom = new JSDOM(data);
 					const mediaLogo = dom.window.document.querySelector('[alt=source-logo]').src;
 					await sendToSourcesAPI(categoryTranslated, mediaLogo, allLinks[i].mediaName);
-					//! to send
 					if (typeOfArticle === 'video') {
-						// do somthing
 						let videoType = await checkVideoType(page);
-
 						if (videoType === 'intern') {
 							let videoLink = dom.window.document.querySelector('.play').getAttribute('href');
 							await premodel.findByIdAndDelete({ _id: allLinks[i]._id });
@@ -164,9 +165,8 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										articleTitle: allLinks[i].articleTitle,
 										articleImageURL: allLinks[i].articleImageURL,
 										articleDescription: htmlDescription,
-										articleSourceLink: allLinks[i].articleNabdLink,
+										articleSourceLink: null,
 										authorName: null,
-
 										categoryName: categoryTranslated,
 										mediaName: allLinks[i].mediaName,
 										mediaLogo: mediaLogo,
@@ -199,7 +199,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										articleTitle: allLinks[i].articleTitle,
 										articleImageURL: allLinks[i].articleImageURL,
 										articleDescription: htmlDescription,
-										articleSourceLink: allLinks[i].articleNabdLink,
+										articleSourceLink: null,
 										categoryName: categoryTranslated,
 										authorName: null,
 										mediaName: allLinks[i].mediaName,
@@ -232,12 +232,27 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 						} else {
 							preSourceLink = '';
 						}
+						const nabdAricleID = allLinks[i].originalArticleID.split("-")[0];
 
+						axios({
+							method: 'POST',
+							url: `http://nabdapp.com/original_story.php?aid=${nabdAricleID}`,
+						})
+							.then(function (response) {
+								const root = parse(response.data);
+								const link = root.querySelectorAll('meta')[2].getAttribute("content");
+								linkSource = link.split("0;url=")[1].split("?utm")[0];
+							})
+							.catch(function (error) {
+								linkSource = null;
+							});
 						const already = await article.find({ originalArticleID: allLinks[i].originalArticleID });
 
 						if (already.length > 0) {
 							console.log('Already published');
 						} else if (already.length === 0) {
+							console.log("waw " + linkSource);
+
 							await article
 								.create({
 									originalArticleID: allLinks[i].originalArticleID,
@@ -249,7 +264,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 									articleImageURL: allLinks[i].articleImageURL,
 									articleDescription: description,
 									articleCleanDescription: articleCleanDescription,
-									articleSourceLink: allLinks[i].articleNabdLink,
+									articleSourceLink: linkSource,
 									categoryName: categoryTranslated,
 									authorName: null,
 									mediaName: allLinks[i].mediaName,
