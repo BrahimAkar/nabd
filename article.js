@@ -251,7 +251,6 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 						if (already.length > 0) {
 							console.log('Already published');
 						} else if (already.length === 0) {
-							console.log("waw " + linkSource);
 
 							await article
 								.create({
