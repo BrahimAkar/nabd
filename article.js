@@ -92,7 +92,7 @@ const task = require('./models/task');
 dotenv.config({ path: './config.env' });
 
 // Connecting MongoDB
-const DB = 'mongodb://youpel:199747@164.90.141.28:27017/postgoo';
+const DB = 'mongodb+srv://brahim:brahim@cluster0.0pvrw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 mongoose
 	.connect(DB, {
 		useNewUrlParser: true,
@@ -104,10 +104,10 @@ mongoose
 		console.log('Database connected');
 	});
 
-var WPAPI = require('wpapi');
+var WPAPI = require('wpapi/superagent');
 const categoriesIDs = require('./categoriesIDs');
 var wp = new WPAPI({
-	endpoint: 'https://cnnarab.com/wp-json/wp/v2/',
+	endpoint: 'https://cnnarab.com/wp-json',
 	username: 'cnnarab',
 	password: 'j3WW0afNN0ojmuJ',
 });
@@ -185,13 +185,15 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 											alt_text: allLinks[i].articleTitle,
 											caption: allLinks[i].articleTitle,
 											description: allLinks[i].articleTitle,
+										}).then(res => {
+											console.log("Wow media created!");
 										})
 											.catch((err) => {
 												console.log(err)
 											});
 										;
 
-
+										console.log(mediaCreated);
 										imageID = mediaCreated.id;
 										const postCreated = await wp.posts().create({
 											title: allLinks[i].articleTitle,
@@ -356,7 +358,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 											console.log(err)
 										});
 									;
-
+									console.log(mediaCreated);
 									imageID = mediaCreated.id;
 									const postCreated = await wp.posts().create({
 										title: allLinks[i].articleTitle,
@@ -366,6 +368,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										featured_media: imageID,
 										categories: [categoriesIDs[modelName]],
 									})
+										.then(async (res) => { })
 										.catch((err) => {
 											console.log(err)
 										});

@@ -73,7 +73,7 @@ const mongoose = require('mongoose');
 dotenv.config({ path: './config.env' });
 
 // Connecting MongoDB
-const DB = 'mongodb://youpel:199747@164.90.141.28:27017/postgoo';
+const DB = 'mongodb+srv://brahim:brahim@cluster0.0pvrw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 mongoose
 	.connect(DB, {
 		useNewUrlParser: true,
