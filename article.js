@@ -108,8 +108,8 @@ var WPAPI = require('wpapi/superagent');
 const categoriesIDs = require('./categoriesIDs');
 var wp = new WPAPI({
 	endpoint: 'https://cnnarab.com/wp-json',
-	username: 'cnnarab',
-	password: 'j3WW0afNN0ojmuJ',
+	username: 'CNNARAB',
+	password: 'oIRwW6VkV6&WrDizzinD85@b',
 });
 
 const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
@@ -140,7 +140,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 					const data = await page.evaluate(() => document.querySelector('*').outerHTML);
 					const dom = new JSDOM(data);
 					const mediaLogo = dom.window.document.querySelector('[alt=source-logo]').src;
-					await sendToSourcesAPI(categoryTranslated, mediaLogo, allLinks[i].mediaName);
+					// await sendToSourcesAPI(categoryTranslated, mediaLogo, allLinks[i].mediaName);
 					if (typeOfArticle === 'video') {
 						let videoType = await checkVideoType(page);
 						if (videoType === 'intern') {
