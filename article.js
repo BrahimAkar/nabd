@@ -104,7 +104,7 @@ mongoose
 		console.log('Database connected');
 	});
 
-const WPAPI = require('wpapi/superagent');
+const WPAPI = require('wpapi');
 const categoriesIDs = require('./categoriesIDs');
 var wp = new WPAPI({
 	endpoint: 'http://cnnarab.com/?rest_route=/',
@@ -185,7 +185,13 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 											alt_text: allLinks[i].articleTitle,
 											caption: allLinks[i].articleTitle,
 											description: allLinks[i].articleTitle,
-										});
+										})
+											.catch((err) => {
+												console.log(err)
+											});
+										;
+
+
 										imageID = mediaCreated.id;
 										const postCreated = await wp.posts().create({
 											title: allLinks[i].articleTitle,
@@ -197,7 +203,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										});
 									})
 									.catch((err) => {
-										//****** */	console.log(err)
+										console.log(err)
 									});
 							}
 						} else if (videoType === 'youtube') {
@@ -246,7 +252,11 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 											alt_text: allLinks[i].articleTitle,
 											caption: allLinks[i].articleTitle,
 											description: allLinks[i].articleTitle,
-										});
+										})
+											.catch((err) => {
+												console.log(err)
+											});
+										;
 										imageID = mediaCreated.id;
 										const postCreated = await wp.posts().create({
 											title: allLinks[i].articleTitle,
@@ -259,7 +269,7 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 									})
 									.catch((err) => {
 
-										//****** */ console.log(err)
+										console.log(err)
 									});
 							}
 						}
@@ -341,7 +351,12 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										alt_text: allLinks[i].articleTitle,
 										caption: allLinks[i].articleTitle,
 										description: allLinks[i].articleTitle,
-									});
+									})
+										.catch((err) => {
+											console.log(err)
+										});
+									;
+
 									imageID = mediaCreated.id;
 									const postCreated = await wp.posts().create({
 										title: allLinks[i].articleTitle,
@@ -350,17 +365,21 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										media: imageID,
 										featured_media: imageID,
 										categories: [categoriesIDs[modelName]],
-									});
+									})
+										.catch((err) => {
+											console.log(err)
+										});
+									;
 								})
 								.catch((err) => {
-									//****** */	console.log(err)
+									console.log(err)
 								});
 						}
 
 						await premodel.findByIdAndDelete({ _id: allLinks[i]._id });
 					}
 				} catch (error) {
-					//****** */	console.log(error.message);
+					console.log(error.message);
 				}
 			}
 			await browser.close();
