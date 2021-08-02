@@ -104,13 +104,13 @@ mongoose
 		console.log('Database connected');
 	});
 
-// const WPAPI = require('wpapi/superagent');
+const WPAPI = require('wpapi/superagent');
 const categoriesIDs = require('./categoriesIDs');
-// var wp = new WPAPI({
-// 	endpoint: 'http://atlageek.com/?rest_route=/',
-// 	username: 'brahimakar',
-// 	password: '110220330',
-// });
+var wp = new WPAPI({
+	endpoint: 'http://cnnarab.com/?rest_route=/',
+	username: 'cnnarab',
+	password: 'j3WW0afNN0ojmuJ',
+});
 
 const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 	const allLinks = await premodel.find();
@@ -146,6 +146,13 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 						if (videoType === 'intern') {
 							let videoLink = dom.window.document.querySelector('.play').getAttribute('href');
 							await premodel.findByIdAndDelete({ _id: allLinks[i]._id });
+							try {
+								const response = await fetch(encodeURI(allLinks[i].articleImageURL));
+								const buffer = await response.buffer();
+								Fs.writeFileSync('./image.jpg', buffer);
+							} catch (error) {
+								console.log('Cant save image');
+							}
 
 							const already2 = await article.find({
 								originalArticleID: allLinks[i].originalArticleID,
@@ -171,6 +178,24 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										mediaName: allLinks[i].mediaName,
 										mediaLogo: mediaLogo,
 									})
+									.then(async (res) => {
+										let imageID;
+										const mediaCreated = await wp.media().file('./image.jpg').create({
+											title: allLinks[i].articleTitle,
+											alt_text: allLinks[i].articleTitle,
+											caption: allLinks[i].articleTitle,
+											description: allLinks[i].articleTitle,
+										});
+										imageID = mediaCreated.id;
+										const postCreated = await wp.posts().create({
+											title: allLinks[i].articleTitle,
+											content: htmlDescription,
+											status: 'publish',
+											media: imageID,
+											featured_media: imageID,
+											categories: [categoriesIDs[modelName]],
+										});
+									})
 									.catch((err) => {
 										//****** */	console.log(err)
 									});
@@ -182,7 +207,13 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 								'https://www.youtube.com/embed/' +
 								fullYoutubeVideo.split('/embed/')[1].split('?autoplay=')[0];
 							await premodel.findByIdAndDelete({ _id: allLinks[i]._id });
-
+							try {
+								const response = await fetch(encodeURI(allLinks[i].articleImageURL));
+								const buffer = await response.buffer();
+								Fs.writeFileSync('./image.jpg', buffer);
+							} catch (error) {
+								console.log('Cant save image');
+							}
 							const already2 = await article.find({
 								originalArticleID: allLinks[i].originalArticleID,
 							});
@@ -206,6 +237,25 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 										authorName: null,
 										mediaName: allLinks[i].mediaName,
 										mediaLogo: mediaLogo,
+									})
+									.then(async (res) => {
+										//! Wordpress Uncomment
+										let imageID;
+										const mediaCreated = await wp.media().file('./image.jpg').create({
+											title: allLinks[i].articleTitle,
+											alt_text: allLinks[i].articleTitle,
+											caption: allLinks[i].articleTitle,
+											description: allLinks[i].articleTitle,
+										});
+										imageID = mediaCreated.id;
+										const postCreated = await wp.posts().create({
+											title: allLinks[i].articleTitle,
+											content: htmlDescription,
+											status: 'publish',
+											media: imageID,
+											featured_media: imageID,
+											categories: [categoriesIDs[modelName]],
+										});
 									})
 									.catch((err) => {
 
@@ -251,6 +301,15 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 							.catch(function (error) {
 								linkSource = null;
 							});
+						//! WORDPRESS Uncomment
+						try {
+							const response = await fetch(encodeURI(allLinks[i].articleImageURL));
+							const buffer = await response.buffer();
+							Fs.writeFileSync('./image.jpg', buffer);
+						} catch (error) {
+							console.log('Cant save image');
+						}
+
 						const already = await article.find({ originalArticleID: allLinks[i].originalArticleID });
 
 						if (already.length > 0) {
@@ -273,6 +332,25 @@ const scrapArticle = async (premodel, categoryID, modelName, taskId) => {
 									authorName: null,
 									mediaName: allLinks[i].mediaName,
 									mediaLogo: mediaLogo,
+								})
+								.then(async (res) => {
+									//! Wordpress Uncomment
+									let imageID;
+									const mediaCreated = await wp.media().file('./image.jpg').create({
+										title: allLinks[i].articleTitle,
+										alt_text: allLinks[i].articleTitle,
+										caption: allLinks[i].articleTitle,
+										description: allLinks[i].articleTitle,
+									});
+									imageID = mediaCreated.id;
+									const postCreated = await wp.posts().create({
+										title: allLinks[i].articleTitle,
+										content: description,
+										status: 'publish',
+										media: imageID,
+										featured_media: imageID,
+										categories: [categoriesIDs[modelName]],
+									});
 								})
 								.catch((err) => {
 									//****** */	console.log(err)
