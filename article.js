@@ -104,10 +104,10 @@ mongoose
 		console.log('Database connected');
 	});
 
-const WPAPI = require('wpapi');
+var WPAPI = require('wpapi');
 const categoriesIDs = require('./categoriesIDs');
 var wp = new WPAPI({
-	endpoint: 'http://cnnarab.com/?rest_route=/',
+	endpoint: 'https://cnnarab.com/wp-json/wp/v2/',
 	username: 'cnnarab',
 	password: 'j3WW0afNN0ojmuJ',
 });
