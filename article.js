@@ -92,7 +92,7 @@ const task = require('./models/task');
 dotenv.config({ path: './config.env' });
 
 // Connecting MongoDB
-const DB = 'mongodb+srv://brahim:brahim@cluster0.0pvrw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const DB = 'mongodb://youpel:199747@164.90.141.28:27017/postgoo';
 mongoose
 	.connect(DB, {
 		useNewUrlParser: true,
